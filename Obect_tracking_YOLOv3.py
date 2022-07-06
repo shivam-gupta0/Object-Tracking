@@ -2,11 +2,10 @@ import cv2
 import numpy as np
 import math
 
-#cfg_path = "E:\\master_thesis\\project\\car_yolov3\\yolo_pretrained\\yolov3.cfg"
-#weights_path = "E:\\master_thesis\\project\\car_yolov3\\yolo_pretrained\\yolov3-spp.weights"
 
-cfg_path = 'E:\\master_thesis\\project\\vehicle_dataset\\model_test\\yolov3_custom1.cfg'
-weights_path = "E:\\master_thesis\\project\\vehicle_dataset\\model_test\\yolov3_custom_last1.weights"
+
+cfg_path = 'E:\\project\\vehicle_dataset\\model_test\\yolov3_custom1.cfg'
+weights_path = "E:\\project\\vehicle_dataset\\model_test\\yolov3_custom1.weights"
 
 def detection(img, cfg_path, weights_path):
     net = cv2.dnn.readNetFromDarknet(cfg_path, weights_path)
@@ -41,16 +40,14 @@ def detection(img, cfg_path, weights_path):
 
 
 classes = []
-#with open("E:\\master_thesis\\project\\car_yolov3\\yolo_pretrained\\coco.names", 'r') as f:
-    #classes = [line.strip() for line in f.readlines()]
 
-with open("E:\\master_thesis\\project\\vehicle_dataset\\new_images\\test_data//classes.txt", 'r') as f:
+with open("E:\\project\\vehicle_dataset\\new_images\\test_data//classes.txt", 'r') as f:
     classes = [line.strip() for line in f.readlines()]
 
 old_center_p = []
 id_dict = {}
 ids = 0
-cap = cv2.VideoCapture("E:\\master_thesis\\project\\vehicle_dataset\\model_test\\3.webm")
+cap = cv2.VideoCapture("E:\\project\\vehicle_dataset\\model_test\\3.webm")
 
 while cap.isOpened():
     rate, frame = cap.read()
