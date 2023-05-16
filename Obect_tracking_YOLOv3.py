@@ -4,8 +4,8 @@ import math
 
 
 
-cfg_path = 'E:\\project\\vehicle_dataset\\model_test\\yolov3_custom1.cfg'
-weights_path = "E:\\project\\vehicle_dataset\\model_test\\yolov3_custom1.weights"
+cfg_path = 'configuration file path'
+weights_path = "custom weights path"
 
 def detection(img, cfg_path, weights_path):
     net = cv2.dnn.readNetFromDarknet(cfg_path, weights_path)
