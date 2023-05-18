@@ -4,7 +4,7 @@ This project provides a script that performs real-time object detection and vehi
 
 # Installation<br>
 Clone the repository:<br>
-git clone https://github.com/your-username/project-name.git<br><br>
+git clone https://github.com/shivam-gupta0/Object-Tracking.git<br><br>
 Install the required dependencies:<br>
 pip install opencv-python numpy<br><br>
 Usage <br>
